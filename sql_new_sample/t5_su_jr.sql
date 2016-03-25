@@ -1,10 +1,10 @@
 -- ----------------------------
--- Procedure structure for `t5`
+-- Procedure structure for `t5_jr`
 -- ----------------------------
-DROP PROCEDURE IF EXISTS `t5`;
+DROP PROCEDURE IF EXISTS `t5_jr`;
 DELIMITER ;;
 CREATE DEFINER = `root`@`localhost`
-PROCEDURE `t5`()
+PROCEDURE `t5_jr`()
 BEGIN
   #Routine body goes here...
   DECLARE s int DEFAULT 0;
@@ -159,4 +159,4 @@ BEGIN
 END
 ;;
 DELIMITER ;
-call `t5`()
+call `t5_jr`()
