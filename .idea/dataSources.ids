@@ -1,0 +1,2063 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - recsys16@localhost" uuid="6f003f3e-57d2-4e61-a7bb-ef740fc204c2">
+    <database-info product="MySQL" version="5.7.11-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="recsys16"/>
+      <table id="2" parent="1" name="interaction"/>
+      <table id="3" parent="1" name="item"/>
+      <table id="4" parent="1" name="item_feature"/>
+      <table id="5" parent="1" name="job"/>
+      <table id="6" parent="1" name="jobroles"/>
+      <table id="7" parent="1" name="join_uia"/>
+      <table id="8" parent="1" name="nsample"/>
+      <table id="9" parent="1" name="psample"/>
+      <table id="10" parent="1" name="sample"/>
+      <table id="11" parent="1" name="tags"/>
+      <table id="12" parent="1" name="title"/>
+      <table id="13" parent="1" name="user"/>
+      <table id="14" parent="1" name="user_feature"/>
+      <view id="15" parent="1" name="v_p_sample">
+        <comment>VIEW</comment>
+      </view>
+      <routine id="16" parent="1" name="b_feature">
+        <routine-kind>PROCEDURE</routine-kind>
+      </routine>
+      <routine id="17" parent="1" name="b_feature2">
+        <routine-kind>PROCEDURE</routine-kind>
+      </routine>
+      <routine id="18" parent="1" name="ns">
+        <routine-kind>PROCEDURE</routine-kind>
+      </routine>
+      <routine id="19" parent="1" name="procedure1">
+        <routine-kind>PROCEDURE</routine-kind>
+      </routine>
+      <routine id="20" parent="1" name="ps">
+        <routine-kind>PROCEDURE</routine-kind>
+      </routine>
+      <routine id="21" parent="1" name="sj_cl">
+        <routine-kind>PROCEDURE</routine-kind>
+      </routine>
+      <routine id="22" parent="1" name="sj_dis">
+        <routine-kind>PROCEDURE</routine-kind>
+      </routine>
+      <routine id="23" parent="1" name="sj_emp">
+        <routine-kind>PROCEDURE</routine-kind>
+      </routine>
+      <routine id="24" parent="1" name="sj_geo">
+        <routine-kind>PROCEDURE</routine-kind>
+      </routine>
+      <routine id="25" parent="1" name="sj_tags">
+        <routine-kind>PROCEDURE</routine-kind>
+      </routine>
+      <routine id="26" parent="1" name="sj_title">
+        <routine-kind>PROCEDURE</routine-kind>
+      </routine>
+      <routine id="27" parent="1" name="su_degree">
+        <routine-kind>PROCEDURE</routine-kind>
+      </routine>
+      <routine id="28" parent="1" name="su_field">
+        <routine-kind>PROCEDURE</routine-kind>
+      </routine>
+      <routine id="29" parent="1" name="su_jr">
+        <routine-kind>PROCEDURE</routine-kind>
+      </routine>
+      <routine id="30" parent="1" name="t1">
+        <routine-kind>PROCEDURE</routine-kind>
+      </routine>
+      <routine id="31" parent="1" name="t2">
+        <routine-kind>PROCEDURE</routine-kind>
+      </routine>
+      <routine id="32" parent="1" name="t3">
+        <routine-kind>PROCEDURE</routine-kind>
+      </routine>
+      <routine id="33" parent="1" name="t4">
+        <routine-kind>PROCEDURE</routine-kind>
+      </routine>
+      <routine id="34" parent="1" name="t5">
+        <routine-kind>PROCEDURE</routine-kind>
+      </routine>
+      <column id="35" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="36" parent="2" name="user_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="37" parent="2" name="item_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="38" parent="2" name="interaction_type">
+        <data-type>tinyint(4)</data-type>
+      </column>
+      <column id="39" parent="2" name="created_at">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="40" parent="2" name="week">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="41" parent="2" name="created_at">
+        <columns>created_at</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="42" parent="2" name="id">
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="43" parent="2" name="interaction_type">
+        <columns>interaction_type</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="44" parent="2" name="item_id">
+        <columns>item_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="45" parent="2" name="user_id">
+        <columns>user_id
+item_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="46" parent="2" name="week">
+        <columns>week</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="47" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="48" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="49" parent="3" name="title">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="50" parent="3" name="career_level">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="51" parent="3" name="discipline_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="52" parent="3" name="industry_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="53" parent="3" name="employment">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="54" parent="3" name="country">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="55" parent="3" name="region">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="56" parent="3" name="latitude">
+        <data-type>double</data-type>
+      </column>
+      <column id="57" parent="3" name="longitude">
+        <data-type>double</data-type>
+      </column>
+      <column id="58" parent="3" name="tags">
+        <data-type>text</data-type>
+      </column>
+      <column id="59" parent="3" name="created_at">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="60" parent="3" name="active_during_test">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="61" parent="3" name="week">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="62" parent="3" name="active_during_test">
+        <columns>active_during_test</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="63" parent="3" name="country">
+        <columns>country</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="64" parent="3" name="created_at">
+        <columns>created_at</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="65" parent="3" name="discipline_id">
+        <columns>discipline_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="66" parent="3" name="employment">
+        <columns>employment</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="67" parent="3" name="id">
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="68" parent="3" name="industry_id">
+        <columns>industry_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="69" parent="3" name="latitude">
+        <columns>latitude
+longitude</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="70" parent="3" name="region">
+        <columns>region</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="71" parent="3" name="tags">
+        <columns>tags</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="72" parent="3" name="title">
+        <columns>title</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="73" parent="3" name="week">
+        <columns>week</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="74" parent="3" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="75" parent="4" name="item_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="76" parent="4" name="cl1">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="77" parent="4" name="cl2">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="78" parent="4" name="cl3">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="79" parent="4" name="cl4">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="80" parent="4" name="cl5">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="81" parent="4" name="cl6">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="82" parent="4" name="dis1">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="83" parent="4" name="dis2">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="84" parent="4" name="dis3">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="85" parent="4" name="dis4">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="86" parent="4" name="dis5">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="87" parent="4" name="dis6">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="88" parent="4" name="dis7">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="89" parent="4" name="dis8">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="90" parent="4" name="dis9">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="91" parent="4" name="dis10">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="92" parent="4" name="dis11">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="93" parent="4" name="dis12">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="94" parent="4" name="dis13">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="95" parent="4" name="dis14">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="96" parent="4" name="dis15">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="97" parent="4" name="dis16">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="98" parent="4" name="dis17">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="99" parent="4" name="dis18">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="100" parent="4" name="dis19">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="101" parent="4" name="dis20">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="102" parent="4" name="dis21">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="103" parent="4" name="dis22">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="104" parent="4" name="dis23">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="105" parent="4" name="ind1">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="106" parent="4" name="ind2">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="107" parent="4" name="ind3">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="108" parent="4" name="ind4">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="109" parent="4" name="ind5">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="110" parent="4" name="ind6">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="111" parent="4" name="ind7">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="112" parent="4" name="ind8">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="113" parent="4" name="ind9">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="114" parent="4" name="ind10">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="115" parent="4" name="ind11">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="116" parent="4" name="ind12">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="117" parent="4" name="ind13">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="118" parent="4" name="ind14">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="119" parent="4" name="ind15">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="120" parent="4" name="ind16">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="121" parent="4" name="ind17">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="122" parent="4" name="ind18">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="123" parent="4" name="ind19">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="124" parent="4" name="ind20">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="125" parent="4" name="ind21">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="126" parent="4" name="ind22">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="127" parent="4" name="ind23">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="128" parent="4" name="country1">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="129" parent="4" name="country2">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="130" parent="4" name="country3">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="131" parent="4" name="reg1">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="132" parent="4" name="reg2">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="133" parent="4" name="reg3">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="134" parent="4" name="reg4">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="135" parent="4" name="reg5">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="136" parent="4" name="reg6">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="137" parent="4" name="reg7">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="138" parent="4" name="reg8">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="139" parent="4" name="reg9">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="140" parent="4" name="reg10">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="141" parent="4" name="reg11">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="142" parent="4" name="reg12">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="143" parent="4" name="reg13">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="144" parent="4" name="reg14">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="145" parent="4" name="reg15">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="146" parent="4" name="reg16">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="147" parent="4" name="emp1">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="148" parent="4" name="emp2">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="149" parent="4" name="emp3">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="150" parent="4" name="emp4">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="151" parent="4" name="emp5">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="152" parent="4" name="title1">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="153" parent="4" name="title2">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="154" parent="4" name="title3">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="155" parent="4" name="title4">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="156" parent="4" name="title5">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="157" parent="4" name="title_length">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="158" parent="4" name="tags1">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="159" parent="4" name="tags2">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="160" parent="4" name="tags3">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="161" parent="4" name="tags4">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="162" parent="4" name="tags5">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="163" parent="4" name="tags_length">
+        <data-type>double</data-type>
+      </column>
+      <index id="164" parent="4" name="item_id">
+        <columns>item_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="165" parent="4" name="PRIMARY">
+        <columns>item_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="166" parent="5" name="item_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="167" parent="5" name="similar_title">
+        <data-type>text</data-type>
+      </column>
+      <column id="168" parent="5" name="similar_career">
+        <data-type>text</data-type>
+      </column>
+      <column id="169" parent="5" name="similar_discipline">
+        <data-type>text</data-type>
+      </column>
+      <column id="170" parent="5" name="similar_geo">
+        <data-type>text</data-type>
+      </column>
+      <column id="171" parent="5" name="similar_tag">
+        <data-type>text</data-type>
+      </column>
+      <index id="172" parent="5" name="item_id">
+        <columns>item_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="173" parent="5" name="PRIMARY">
+        <columns>item_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="174" parent="6" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="175" parent="6" name="number">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="176" parent="6" name="bin">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="177" parent="6" name="bin">
+        <columns>bin</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="178" parent="6" name="id">
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="179" parent="6" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="180" parent="7" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="181" parent="7" name="user_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="182" parent="7" name="item_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="183" parent="7" name="interaction_type">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="184" parent="7" name="u_jobroles">
+        <data-type>text</data-type>
+      </column>
+      <column id="185" parent="7" name="u_career_level">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="186" parent="7" name="u_discipline_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="187" parent="7" name="u_industry_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="188" parent="7" name="u_country">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="189" parent="7" name="u_region">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="190" parent="7" name="u_experience_n_entries_class">
+        <data-type>tinyint(4)</data-type>
+      </column>
+      <column id="191" parent="7" name="u_experience_years_experience">
+        <data-type>tinyint(4)</data-type>
+      </column>
+      <column id="192" parent="7" name="u_experience_years_in_current">
+        <data-type>tinyint(4)</data-type>
+      </column>
+      <column id="193" parent="7" name="u_edu_degree">
+        <data-type>tinyint(4)</data-type>
+      </column>
+      <column id="194" parent="7" name="u_edu_fieldofstudies">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="195" parent="7" name="u_field_size">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="196" parent="7" name="i_title">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="197" parent="7" name="i_career_level">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="198" parent="7" name="i_discipline_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="199" parent="7" name="i_industry_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="200" parent="7" name="i_country">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="201" parent="7" name="i_region">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="202" parent="7" name="i_latitude">
+        <data-type>double</data-type>
+      </column>
+      <column id="203" parent="7" name="i_longitude">
+        <data-type>double</data-type>
+      </column>
+      <column id="204" parent="7" name="i_employment">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="205" parent="7" name="i_tags">
+        <data-type>text</data-type>
+      </column>
+      <column id="206" parent="7" name="i_active_during_test">
+        <data-type>tinyint(4)</data-type>
+      </column>
+      <column id="207" parent="7" name="i_created_at">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="208" parent="7" name="ui_created_at">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="209" parent="7" name="i_week">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="210" parent="7" name="ui_week">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="211" parent="7" name="interaction_type">
+        <columns>interaction_type</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="212" parent="7" name="item_id">
+        <columns>item_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="213" parent="7" name="i_active_during_test">
+        <columns>i_active_during_test</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="214" parent="7" name="i_career_level">
+        <columns>i_career_level</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="215" parent="7" name="i_country">
+        <columns>i_country</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="216" parent="7" name="i_created_at">
+        <columns>i_created_at</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="217" parent="7" name="i_discipline_id">
+        <columns>i_discipline_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="218" parent="7" name="i_employment">
+        <columns>i_employment</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="219" parent="7" name="i_industry_id">
+        <columns>i_industry_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="220" parent="7" name="i_industry_id_2">
+        <columns>i_industry_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="221" parent="7" name="i_latitude">
+        <columns>i_latitude
+i_longitude</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="222" parent="7" name="i_region">
+        <columns>i_region</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="223" parent="7" name="i_tags">
+        <columns>i_tags</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="224" parent="7" name="i_title">
+        <columns>i_title</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="225" parent="7" name="i_week">
+        <columns>i_week</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="226" parent="7" name="i_week_2">
+        <columns>i_week
+ui_week
+interaction_type</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="227" parent="7" name="ui_created_at">
+        <columns>ui_created_at</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="228" parent="7" name="ui_week">
+        <columns>ui_week</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="229" parent="7" name="user_id">
+        <columns>user_id
+item_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="230" parent="7" name="u_career_level">
+        <columns>u_career_level
+i_career_level</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="231" parent="7" name="u_country">
+        <columns>u_country
+i_country</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="232" parent="7" name="u_discipline_id">
+        <columns>u_discipline_id
+i_discipline_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="233" parent="7" name="u_edu_degree">
+        <columns>u_edu_degree</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="234" parent="7" name="u_edu_fieldofstudies">
+        <columns>u_edu_fieldofstudies</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="235" parent="7" name="u_experience_n_entries_class">
+        <columns>u_experience_n_entries_class</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="236" parent="7" name="u_experience_years_experience">
+        <columns>u_experience_years_experience</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="237" parent="7" name="u_experience_years_in_current">
+        <columns>u_experience_years_in_current</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="238" parent="7" name="u_field_size">
+        <columns>u_field_size</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="239" parent="7" name="u_jobroles">
+        <columns>u_jobroles</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="240" parent="7" name="u_region">
+        <columns>u_region
+i_region</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="241" parent="7" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="242" parent="8" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="243" parent="8" name="user_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="244" parent="8" name="item_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="245" parent="8" name="serial">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="246" parent="8" name="label">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="247" parent="8" name="id">
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="248" parent="8" name="label">
+        <columns>label</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="249" parent="8" name="serial">
+        <columns>serial</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="250" parent="8" name="user_id">
+        <columns>user_id
+item_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="251" parent="8" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="252" parent="9" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="253" parent="9" name="user_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="254" parent="9" name="item_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="255" parent="9" name="serial">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="256" parent="9" name="label">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="257" parent="9" name="id">
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="258" parent="9" name="label">
+        <columns>label</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="259" parent="9" name="serial">
+        <columns>serial</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="260" parent="9" name="user_id">
+        <columns>user_id
+item_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="261" parent="9" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="262" parent="10" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="263" parent="10" name="user_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="264" parent="10" name="item_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="265" parent="10" name="serial">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="266" parent="10" name="label">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="267" parent="10" name="sj_title_1_1_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="268" parent="10" name="sj_title_1_1_p">
+        <data-type>int(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="269" parent="10" name="sj_title_2_1_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="270" parent="10" name="sj_title_2_1_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="271" parent="10" name="sj_title_2_2_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="272" parent="10" name="sj_title_2_2_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="273" parent="10" name="sj_tags_1_1_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="274" parent="10" name="sj_tags_1_1_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="275" parent="10" name="sj_tags_2_1_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="276" parent="10" name="sj_tags_2_1_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="277" parent="10" name="sj_tags_2_2_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="278" parent="10" name="sj_tags_2_2_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="279" parent="10" name="sj_geo_1_1_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="280" parent="10" name="sj_geo_1_1_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="281" parent="10" name="sj_geo_2_1_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="282" parent="10" name="sj_geo_2_1_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="283" parent="10" name="sj_geo_2_2_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="284" parent="10" name="sj_geo_2_2_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="285" parent="10" name="sj_dis_1_1_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="286" parent="10" name="sj_dis_1_1_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="287" parent="10" name="sj_dis_2_1_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="288" parent="10" name="sj_dis_2_1_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="289" parent="10" name="sj_dis_2_2_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="290" parent="10" name="sj_dis_2_2_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="291" parent="10" name="sj_cl_1_1_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="292" parent="10" name="sj_cl_1_1_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="293" parent="10" name="sj_cl_2_1_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="294" parent="10" name="sj_cl_2_1_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="295" parent="10" name="sj_cl_2_2_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="296" parent="10" name="sj_cl_2_2_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="297" parent="10" name="sj_emp_1_1_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="298" parent="10" name="sj_emp_1_1_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="299" parent="10" name="sj_emp_2_1_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="300" parent="10" name="sj_emp_2_1_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="301" parent="10" name="sj_emp_2_2_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="302" parent="10" name="sj_Emp_2_2_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="303" parent="10" name="usj_title_1_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="304" parent="10" name="usj_title_1_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="305" parent="10" name="usj_title_2_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="306" parent="10" name="usj_title_2_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="307" parent="10" name="usj_title_3_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="308" parent="10" name="usj_title_3_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="309" parent="10" name="usj_tags_1_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="310" parent="10" name="usj_tags_1_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="311" parent="10" name="usj_tags_2_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="312" parent="10" name="usj_tags_2_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="313" parent="10" name="usj_tags_3_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="314" parent="10" name="usj_tags_3_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="315" parent="10" name="usj_geo_1_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="316" parent="10" name="usj_geo_1_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="317" parent="10" name="usj_geo_2_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="318" parent="10" name="usj_geo_2_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="319" parent="10" name="usj_geo_3_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="320" parent="10" name="usj_geo_3_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="321" parent="10" name="usj_dis_1_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="322" parent="10" name="usj_dis_1_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="323" parent="10" name="usj_dis_2_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="324" parent="10" name="usj_dis_2_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="325" parent="10" name="usj_dis_3_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="326" parent="10" name="usj_dis_3_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="327" parent="10" name="usj_cl_1_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="328" parent="10" name="usj_cl_1_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="329" parent="10" name="usj_cl_2_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="330" parent="10" name="usj_cl_2_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="331" parent="10" name="usj_cl_3_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="332" parent="10" name="usj_cl_3_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="333" parent="10" name="usj_emp_1_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="334" parent="10" name="usj_emp_1_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="335" parent="10" name="usj_emp_2_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="336" parent="10" name="usj_emp_2_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="337" parent="10" name="usj_emp_3_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="338" parent="10" name="usj_emp_3_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="339" parent="10" name="jsu_jr_1_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="340" parent="10" name="jsu_jr_1_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="341" parent="10" name="jsu_jr_2_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="342" parent="10" name="jsu_jr_2_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="343" parent="10" name="jsu_jr_3_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="344" parent="10" name="jsu_jr_3_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="345" parent="10" name="jsu_f_1_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="346" parent="10" name="jsu_f_1_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="347" parent="10" name="jsu_f_2_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="348" parent="10" name="jsu_f_2_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="349" parent="10" name="jsu_f_3_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="350" parent="10" name="jsu_f_3_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="351" parent="10" name="jsu_d_1_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="352" parent="10" name="jsu_d_1_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="353" parent="10" name="jsu_d_2_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="354" parent="10" name="jsu_d_2_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="355" parent="10" name="jsu_d_3_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="356" parent="10" name="jsu_d_3_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="357" parent="10" name="jsu_cl_1_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="358" parent="10" name="jsu_cl_1_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="359" parent="10" name="jsu_cl_2_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="360" parent="10" name="jsu_cl_2_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="361" parent="10" name="jsu_cl_3_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="362" parent="10" name="jsu_cl_3_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="363" parent="10" name="jsu_dis_1_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="364" parent="10" name="jsu_dis_1_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="365" parent="10" name="jsu_dis_2_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="366" parent="10" name="jsu_dis_2_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="367" parent="10" name="jsu_dis_3_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="368" parent="10" name="jsu_dis_3_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="369" parent="10" name="jsu_y_1_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="370" parent="10" name="jsu_y_1_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="371" parent="10" name="jsu_y_2_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="372" parent="10" name="jsu_y_2_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="373" parent="10" name="jsu_y_3_n">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="374" parent="10" name="jsu_y_3_p">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="375" parent="10" name="u_jobroles">
+        <data-type>text</data-type>
+      </column>
+      <column id="376" parent="10" name="u_career_level">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="377" parent="10" name="u_discipline_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="378" parent="10" name="u_industry_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="379" parent="10" name="u_country">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="380" parent="10" name="u_region">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="381" parent="10" name="u_experience_n_entries_class">
+        <data-type>tinyint(4)</data-type>
+      </column>
+      <column id="382" parent="10" name="u_experience_years_experience">
+        <data-type>tinyint(4)</data-type>
+      </column>
+      <column id="383" parent="10" name="u_experience_years_in_current">
+        <data-type>tinyint(4)</data-type>
+      </column>
+      <column id="384" parent="10" name="u_edu_degree">
+        <data-type>tinyint(4)</data-type>
+      </column>
+      <column id="385" parent="10" name="u_edu_fieldofstudies">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="386" parent="10" name="i_title">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="387" parent="10" name="i_career_level">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="388" parent="10" name="i_discipline_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="389" parent="10" name="i_industry_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="390" parent="10" name="i_country">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="391" parent="10" name="i_region">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="392" parent="10" name="i_latitude">
+        <data-type>double</data-type>
+      </column>
+      <column id="393" parent="10" name="i_longitude">
+        <data-type>double</data-type>
+      </column>
+      <column id="394" parent="10" name="i_employment">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="395" parent="10" name="i_tags">
+        <data-type>text</data-type>
+      </column>
+      <index id="396" parent="10" name="id">
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="397" parent="10" name="item_id">
+        <columns>item_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="398" parent="10" name="i_career_level">
+        <columns>i_career_level</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="399" parent="10" name="i_country">
+        <columns>i_country</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="400" parent="10" name="i_discipline_id">
+        <columns>i_discipline_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="401" parent="10" name="i_employment">
+        <columns>i_employment</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="402" parent="10" name="i_industry_id">
+        <columns>i_industry_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="403" parent="10" name="i_latitude">
+        <columns>i_latitude
+i_longitude</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="404" parent="10" name="i_region">
+        <columns>i_region</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="405" parent="10" name="i_tags">
+        <columns>i_tags</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="406" parent="10" name="i_title">
+        <columns>i_title</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="407" parent="10" name="label">
+        <columns>label</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="408" parent="10" name="serial">
+        <columns>serial</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="409" parent="10" name="user_id">
+        <columns>user_id
+item_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="410" parent="10" name="u_career_level">
+        <columns>u_career_level</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="411" parent="10" name="u_country">
+        <columns>u_country</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="412" parent="10" name="u_discipline_id">
+        <columns>u_discipline_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="413" parent="10" name="u_edu_degree">
+        <columns>u_edu_degree</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="414" parent="10" name="u_edu_fieldofstudies">
+        <columns>u_edu_fieldofstudies</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="415" parent="10" name="u_experience_n_entries_class">
+        <columns>u_experience_n_entries_class</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="416" parent="10" name="u_experience_years_experience">
+        <columns>u_experience_years_experience</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="417" parent="10" name="u_experience_years_in_current">
+        <columns>u_experience_years_in_current</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="418" parent="10" name="u_industry_id">
+        <columns>u_industry_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="419" parent="10" name="u_jobroles">
+        <columns>u_jobroles</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="420" parent="10" name="u_region">
+        <columns>u_region</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="421" parent="10" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="422" parent="11" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="423" parent="11" name="number">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="424" parent="11" name="bin">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="425" parent="11" name="bin">
+        <columns>bin</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="426" parent="11" name="id">
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="427" parent="11" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="428" parent="12" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="429" parent="12" name="number">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="430" parent="12" name="bin">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="431" parent="12" name="bin">
+        <columns>bin</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="432" parent="12" name="id">
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="433" parent="12" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="434" parent="13" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="435" parent="13" name="jobroles">
+        <data-type>text</data-type>
+      </column>
+      <column id="436" parent="13" name="career_level">
+        <data-type>tinyint(4)</data-type>
+      </column>
+      <column id="437" parent="13" name="discipline_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="438" parent="13" name="industry_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="439" parent="13" name="country">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="440" parent="13" name="region">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="441" parent="13" name="experience_n_entries_class">
+        <data-type>tinyint(4)</data-type>
+      </column>
+      <column id="442" parent="13" name="experience_years_experience">
+        <data-type>tinyint(4)</data-type>
+      </column>
+      <column id="443" parent="13" name="experience_years_in_current">
+        <data-type>tinyint(4)</data-type>
+      </column>
+      <column id="444" parent="13" name="edu_degree">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="445" parent="13" name="edu_fieldofstudies">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <index id="446" parent="13" name="career_level">
+        <columns>career_level</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="447" parent="13" name="country">
+        <columns>country</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="448" parent="13" name="discipline_id">
+        <columns>discipline_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="449" parent="13" name="edu_degree">
+        <columns>edu_degree</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="450" parent="13" name="edu_fieldofstudies">
+        <columns>edu_fieldofstudies</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="451" parent="13" name="experience_n_entries_class">
+        <columns>experience_n_entries_class</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="452" parent="13" name="experience_years_experience">
+        <columns>experience_years_experience</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="453" parent="13" name="experience_years_in_current">
+        <columns>experience_years_in_current</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="454" parent="13" name="id">
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="455" parent="13" name="industry_id">
+        <columns>industry_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="456" parent="13" name="jobroles">
+        <columns>jobroles</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="457" parent="13" name="region">
+        <columns>region</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="458" parent="13" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="459" parent="14" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="460" parent="14" name="cl1">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="461" parent="14" name="cl2">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="462" parent="14" name="cl3">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="463" parent="14" name="cl4">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="464" parent="14" name="cl5">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="465" parent="14" name="cl6">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="466" parent="14" name="dis1">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="467" parent="14" name="dis2">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="468" parent="14" name="dis3">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="469" parent="14" name="dis4">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="470" parent="14" name="dis5">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="471" parent="14" name="dis6">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="472" parent="14" name="dis7">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="473" parent="14" name="dis8">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="474" parent="14" name="dis9">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="475" parent="14" name="dis10">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="476" parent="14" name="dis11">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="477" parent="14" name="dis12">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="478" parent="14" name="dis13">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="479" parent="14" name="dis14">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="480" parent="14" name="dis15">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="481" parent="14" name="dis16">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="482" parent="14" name="dis17">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="483" parent="14" name="dis18">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="484" parent="14" name="dis19">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="485" parent="14" name="dis20">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="486" parent="14" name="dis21">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="487" parent="14" name="dis22">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="488" parent="14" name="dis23">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="489" parent="14" name="ind1">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="490" parent="14" name="ind2">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="491" parent="14" name="ind3">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="492" parent="14" name="ind4">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="493" parent="14" name="ind5">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="494" parent="14" name="ind6">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="495" parent="14" name="ind7">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="496" parent="14" name="ind8">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="497" parent="14" name="ind9">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="498" parent="14" name="ind10">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="499" parent="14" name="ind11">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="500" parent="14" name="ind12">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="501" parent="14" name="ind13">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="502" parent="14" name="ind14">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="503" parent="14" name="ind15">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="504" parent="14" name="ind16">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="505" parent="14" name="ind17">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="506" parent="14" name="ind18">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="507" parent="14" name="ind19">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="508" parent="14" name="ind20">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="509" parent="14" name="ind21">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="510" parent="14" name="ind22">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="511" parent="14" name="ind23">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="512" parent="14" name="country1">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="513" parent="14" name="country2">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="514" parent="14" name="country3">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="515" parent="14" name="reg1">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="516" parent="14" name="reg2">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="517" parent="14" name="reg3">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="518" parent="14" name="reg4">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="519" parent="14" name="reg5">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="520" parent="14" name="reg6">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="521" parent="14" name="reg7">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="522" parent="14" name="reg8">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="523" parent="14" name="reg9">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="524" parent="14" name="reg10">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="525" parent="14" name="reg11">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="526" parent="14" name="reg12">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="527" parent="14" name="reg13">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="528" parent="14" name="reg14">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="529" parent="14" name="reg15">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="530" parent="14" name="reg16">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="531" parent="14" name="entries">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="532" parent="14" name="year">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="533" parent="14" name="c_year">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="534" parent="14" name="degree">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="535" parent="14" name="jr1">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="536" parent="14" name="jr2">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="537" parent="14" name="jr3">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="538" parent="14" name="jr4">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="539" parent="14" name="jr5">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="540" parent="14" name="jr_length">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="541" parent="14" name="f1">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="542" parent="14" name="f2">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="543" parent="14" name="f3">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="544" parent="14" name="f4">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="545" parent="14" name="f5">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="546" parent="14" name="f6">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="547" parent="14" name="f7">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="548" parent="14" name="f8">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="549" parent="14" name="f9">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="550" parent="14" name="f_length">
+        <data-type>double</data-type>
+      </column>
+      <index id="551" parent="14" name="user_id">
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="552" parent="14" name="PRIMARY">
+        <columns>user_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="553" parent="15" name="user_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="554" parent="15" name="item_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="555" parent="15" name="serial">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="556" parent="15" name="jobroles">
+        <data-type>text</data-type>
+      </column>
+      <column id="557" parent="15" name="u_cl">
+        <data-type>tinyint(4)</data-type>
+      </column>
+      <column id="558" parent="15" name="u_dis">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="559" parent="15" name="u_ind">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="560" parent="15" name="u_country">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="561" parent="15" name="u_region">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="562" parent="15" name="entry">
+        <data-type>tinyint(4)</data-type>
+      </column>
+      <column id="563" parent="15" name="year">
+        <data-type>tinyint(4)</data-type>
+      </column>
+      <column id="564" parent="15" name="c_year">
+        <data-type>tinyint(4)</data-type>
+      </column>
+      <column id="565" parent="15" name="degree">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="566" parent="15" name="field">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="567" parent="15" name="title">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="568" parent="15" name="i_cl">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="569" parent="15" name="i_dis">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="570" parent="15" name="i_ind">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="571" parent="15" name="employment">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="572" parent="15" name="i_country">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="573" parent="15" name="i_region">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="574" parent="15" name="latitude">
+        <data-type>double</data-type>
+      </column>
+      <column id="575" parent="15" name="longitude">
+        <data-type>double</data-type>
+      </column>
+      <column id="576" parent="15" name="tags">
+        <data-type>text</data-type>
+      </column>
+      <column id="577" parent="15" name="created_at">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="578" parent="15" name="active_during_test">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="579" parent="15" name="week">
+        <data-type>int(11)</data-type>
+      </column>
+      <argument id="580" parent="16" name="s1">
+        <direction>IN</direction>
+        <data-type>int(11)</data-type>
+      </argument>
+      <argument id="581" parent="16" name="s2">
+        <direction>IN</direction>
+        <data-type>int(11)</data-type>
+      </argument>
+      <argument id="582" parent="16" name="in_uid">
+        <direction>IN</direction>
+        <data-type>int(11)</data-type>
+      </argument>
+      <argument id="583" parent="16" name="in_title">
+        <direction>IN</direction>
+        <data-type>varchar(200)</data-type>
+      </argument>
+      <argument id="584" parent="16" name="in_dis">
+        <direction>IN</direction>
+        <data-type>int(11)</data-type>
+      </argument>
+      <argument id="585" parent="16" name="in_tag">
+        <direction>IN</direction>
+        <data-type>varchar(200)</data-type>
+      </argument>
+      <argument id="586" parent="16" name="in_cl">
+        <direction>IN</direction>
+        <data-type>int(11)</data-type>
+      </argument>
+      <argument id="587" parent="16" name="in_emp">
+        <direction>IN</direction>
+        <data-type>int(11)</data-type>
+      </argument>
+      <argument id="588" parent="16" name="in_lat">
+        <direction>IN</direction>
+        <data-type>double</data-type>
+      </argument>
+      <argument id="589" parent="16" name="in_long">
+        <direction>IN</direction>
+        <data-type>double</data-type>
+      </argument>
+      <argument id="590" parent="17" name="s1">
+        <direction>IN</direction>
+        <data-type>int(11)</data-type>
+      </argument>
+      <argument id="591" parent="17" name="s2">
+        <direction>IN</direction>
+        <data-type>int(11)</data-type>
+      </argument>
+      <argument id="592" parent="17" name="in_uid">
+        <direction>IN</direction>
+        <data-type>int(11)</data-type>
+      </argument>
+      <argument id="593" parent="17" name="in_title">
+        <direction>IN</direction>
+        <data-type>varchar(200)</data-type>
+      </argument>
+      <argument id="594" parent="17" name="in_dis">
+        <direction>IN</direction>
+        <data-type>int(11)</data-type>
+      </argument>
+      <argument id="595" parent="17" name="in_tag">
+        <direction>IN</direction>
+        <data-type>varchar(200)</data-type>
+      </argument>
+      <argument id="596" parent="17" name="in_cl">
+        <direction>IN</direction>
+        <data-type>int(11)</data-type>
+      </argument>
+      <argument id="597" parent="17" name="in_emp">
+        <direction>IN</direction>
+        <data-type>int(11)</data-type>
+      </argument>
+      <argument id="598" parent="17" name="in_lat">
+        <direction>IN</direction>
+        <data-type>double</data-type>
+      </argument>
+      <argument id="599" parent="17" name="in_long">
+        <direction>IN</direction>
+        <data-type>double</data-type>
+      </argument>
+      <argument id="600" parent="30" name="serial">
+        <direction>IN</direction>
+        <data-type>int(11)</data-type>
+      </argument>
+      <argument id="601" parent="30" name="user_id">
+        <direction>IN</direction>
+        <data-type>int(11)</data-type>
+      </argument>
+      <argument id="602" parent="30" name="item_id">
+        <direction>IN</direction>
+        <data-type>int(11)</data-type>
+      </argument>
+    </database-model>
+  </data-source>
+</component>
