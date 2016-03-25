@@ -37,7 +37,7 @@ BEGIN
 	DECLARE item1_ids TEXT;
 	DECLARE item2_ids TEXT;
 
-	DECLARE cur CURSOR FOR SELECT latitude,longitude FROM item group by latitude,longitude;
+	DECLARE cur CURSOR FOR SELECT distinct latitude,longitude FROM item;
 	DECLARE CONTINUE HANDLER FOR NOT FOUND SET s=1;
 
 
