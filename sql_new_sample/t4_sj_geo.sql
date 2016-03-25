@@ -37,9 +37,8 @@ BEGIN
 	DECLARE item1_ids TEXT;
 	DECLARE item2_ids TEXT;
 
-	DECLARE cur CURSOR FOR SELECT distinct latitude,longitude FROM item;
+	DECLARE cur CURSOR FOR SELECT DISTINCT i_latitude, i_longitude FROM small_sample;
 	DECLARE CONTINUE HANDLER FOR NOT FOUND SET s=1;
-
 
 	OPEN cur;
 	FETCH cur INTO t_latitude,t_longitude;
@@ -61,7 +60,7 @@ BEGIN
 					SELECT IFNULL(COUNT(id),0) into n2 FROM join_uia WHERE ui_week = week2 and interaction_type=4 and i_latitude=t_latitude and i_longitude=t_longitude AND i_week=week1;
 					SELECT IFNULL(COUNT(id),0) into n3 FROM join_uia WHERE ui_week = week2 and interaction_type=4 and i_latitude=t_latitude and i_longitude=t_longitude AND i_week=week2;
 					
-					UPDATE sample SET sj_geo_1_1_p=p3,sj_geo_1_1_n=n3,sj_geo_2_1_p=(p2+p3),sj_geo_2_1_n=(n2+n3),sj_geo_2_2_p=(p1+p2+p3),sj_geo_2_2_n=(n1+n2+n3) WHERE i_latitude=t_latitude and i_longitude=t_longitude AND serial=ser;
+					UPDATE small_sample SET sj_geo_1_1_p=p3,sj_geo_1_1_n=n3,sj_geo_2_1_p=(p2+p3),sj_geo_2_1_n=(n2+n3),sj_geo_2_2_p=(p1+p2+p3),sj_geo_2_2_n=(n1+n2+n3) WHERE i_latitude=t_latitude and i_longitude=t_longitude AND serial=ser;
 
 					
 					BEGIN
@@ -73,7 +72,7 @@ BEGIN
 						open cur2;
 						FETCH cur2 into uid,c;
 						WHILE ss<>1 DO
-							UPDATE sample SET usj_geo_1_p=c  WHERE i_latitude=t_latitude and i_longitude=t_longitude AND serial=ser AND user_id=uid;
+							UPDATE small_sample SET usj_geo_1_p=c  WHERE i_latitude=t_latitude and i_longitude=t_longitude AND serial=ser AND user_id=uid;
 							FETCH cur2 into uid,c;
 						END WHILE;
 						CLOSE cur2;
@@ -89,7 +88,7 @@ BEGIN
 						open cur2;
 						FETCH cur2 into uid,c;
 						WHILE ss<>1 DO
-							UPDATE sample SET usj_geo_2_p=c  WHERE i_latitude=t_latitude and i_longitude=t_longitude AND serial=ser AND user_id=uid;
+							UPDATE small_sample SET usj_geo_2_p=c  WHERE i_latitude=t_latitude and i_longitude=t_longitude AND serial=ser AND user_id=uid;
 							FETCH cur2 into uid,c;
 						END WHILE;
 						CLOSE cur2;
@@ -104,7 +103,7 @@ BEGIN
 						open cur2;
 						FETCH cur2 into uid,c;
 						WHILE ss<>1 DO
-							UPDATE sample SET usj_geo_3_p=c  WHERE i_latitude=t_latitude and i_longitude=t_longitude AND serial=ser AND user_id=uid;
+							UPDATE small_sample SET usj_geo_3_p=c  WHERE i_latitude=t_latitude and i_longitude=t_longitude AND serial=ser AND user_id=uid;
 							FETCH cur2 into uid,c;
 						END WHILE;
 						CLOSE cur2;
@@ -119,7 +118,7 @@ BEGIN
 						open cur2;
 						FETCH cur2 into uid,c;
 						WHILE ss<>1 DO
-							UPDATE sample SET usj_geo_1_n=c  WHERE i_latitude=t_latitude and i_longitude=t_longitude AND serial=ser AND user_id=uid;
+							UPDATE small_sample SET usj_geo_1_n=c  WHERE i_latitude=t_latitude and i_longitude=t_longitude AND serial=ser AND user_id=uid;
 							FETCH cur2 into uid,c;
 						END WHILE;
 						CLOSE cur2;
@@ -135,7 +134,7 @@ BEGIN
 						open cur2;
 						FETCH cur2 into uid,c;
 						WHILE ss<>1 DO
-							UPDATE sample SET usj_geo_2_n=c  WHERE i_latitude=t_latitude and i_longitude=t_longitude AND serial=ser AND user_id=uid;
+							UPDATE small_sample SET usj_geo_2_n=c  WHERE i_latitude=t_latitude and i_longitude=t_longitude AND serial=ser AND user_id=uid;
 							FETCH cur2 into uid,c;
 						END WHILE;
 						CLOSE cur2;
@@ -150,7 +149,7 @@ BEGIN
 						open cur2;
 						FETCH cur2 into uid,c;
 						WHILE ss<>1 DO
-							UPDATE sample SET usj_geo_3_n=c  WHERE i_latitude=t_latitude and i_longitude=t_longitude AND serial=ser AND user_id=uid;
+							UPDATE small_sample SET usj_geo_3_n=c  WHERE i_latitude=t_latitude and i_longitude=t_longitude AND serial=ser AND user_id=uid;
 							FETCH cur2 into uid,c;
 						END WHILE;
 						CLOSE cur2;
