@@ -165,5 +165,3 @@ BEGIN
 END
 //
 DELIMITER ;
-
-CALL `t5_dis`()

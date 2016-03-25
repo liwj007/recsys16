@@ -166,5 +166,3 @@ BEGIN
 END
 //
 DELIMITER ;
-
-CALL `t5_ex_y`()
