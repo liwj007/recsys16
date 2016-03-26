@@ -164,5 +164,3 @@ BEGIN
 END
 //
 DELIMITER ;
-
-CALL `t5_cl`()

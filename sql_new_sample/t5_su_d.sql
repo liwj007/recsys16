@@ -159,4 +159,3 @@ BEGIN
 END
 ;;
 DELIMITER ;
-call `t5_degree`()
