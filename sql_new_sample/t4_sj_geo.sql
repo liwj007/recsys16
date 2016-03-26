@@ -165,4 +165,3 @@ BEGIN
 END
 ;;
 DELIMITER ;
-call `t4_geo`()

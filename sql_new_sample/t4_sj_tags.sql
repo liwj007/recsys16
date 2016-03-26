@@ -165,4 +165,3 @@ BEGIN
 END
 ;;
 DELIMITER ;
-CALL `t4_tags`()

@@ -1,9 +1,9 @@
 -- ----------------------------
--- Procedure structure for t4
+-- Procedure structure for t4_title
 -- ----------------------------
-DROP PROCEDURE IF EXISTS `t4`;
+DROP PROCEDURE IF EXISTS `t4_title`;
 DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `t4`()
+CREATE DEFINER=`root`@`localhost` PROCEDURE `t4_title`()
 BEGIN
 	DECLARE s int default 0;
 	DECLARE t VARCHAR(300);  
@@ -164,4 +164,3 @@ BEGIN
 END
 ;;
 DELIMITER ;
-CALL `t4`()
