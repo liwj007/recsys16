@@ -28,7 +28,7 @@ BEGIN
     DECLARE cur CURSOR FOR 
     SELECT 
         DISTINCT i_latitude, i_longitude 
-    FROM small_sample;
+    FROM small_sample_2;
     DECLARE CONTINUE HANDLER FOR NOT FOUND SET s=1;
 
     OPEN cur;
@@ -47,3 +47,5 @@ BEGIN
 END;
 //
 DELIMITER ;
+
+CALL `geo_insert`();

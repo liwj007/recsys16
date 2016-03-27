@@ -6,6 +6,7 @@ DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `t4_geo`()
 BEGIN
     DECLARE i_st int default 1; 
+    #2501, 5520
     DECLARE i_end int default 2500;
 	DECLARE s int default 0;
 	DECLARE t_latitude double;  
