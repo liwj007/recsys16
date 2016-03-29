@@ -39,17 +39,18 @@ BEGIN
 							ui_week = i
 						AND interaction_type IN (1, 2, 3)
 					) a
-					INNER JOIN (
+					INNER JOIN 
+					(
 						SELECT
 							item_id
 						FROM
-							join_uia b
+							join_uia
 						WHERE
-							ui_week = week1
-						OR ui_week = week2
+							ui_week = week1 OR ui_week = week2
 						AND interaction_type IN (1, 2, 3)
-						) b
-					)
+					) b
+					on a.item_id = b.item_id
+				)
 			)c
 			GROUP BY item_id;
 
