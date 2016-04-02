@@ -1,0 +1,44 @@
+import csv
+
+# 过滤丽姐的推荐列表，只保留目标用户子集的，同时替换第一个“，”为tab
+# 第一遍过滤
+cur.execute("SELECT user_id FROM tar_usr")
+targets = cur.fetchall()
+
+st = {}
+for t in targets:
+    st.add(t[0])
+
+with open(file_path + "/lyl_recl.csv", "w", newline="") as csv_file:
+    spamwriter = csv.writer(csvfile, delimiter='\t', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+    spamwriter.writerow(['user_id','recommended_items'])
+
+    with open(file_path + "/impressionorderresult.csv", "r") as f_2:
+
+        line = 0
+        for r in f_2.readlines():
+
+            if line != 0:
+                r_new = r.replace(",", "\t", 1)
+                lst = r_new.strip().split("\t")
+
+                if lst[0] in st:
+                    if len(lst) == 1:
+                        spawriter.writerow(lst[0], "")
+                    elif lst[1] == "":
+                        spawriter.writerow(lst[0], "")
+                    elif len(lst) == 2:
+                        spamwriter.writerow([lst[0], lst[1]])
+                    else:
+                        pass
+                else:
+                    continue
+            else:
+                pass
+
+            line += 1
+# 第二遍过滤，填充成15万行的
+
+# 保存俊神的推荐列表
+
+# 考虑融合
